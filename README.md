@@ -34,25 +34,25 @@ This project is fully deployable, with:
 
 ## 📁 Project Structure
 
-notex-final-app/
-│
-├── backend/
-│ ├── app.js # Express server + SSE
-│ ├── db.js # SQLite or Postgres helpers
-│ ├── package.json
-│ └── .env
-│
-├── frontend/
-│ ├── public/ # SVG backgrounds, icons
-│ ├── src/app/ # Next.js application pages
-│ │ ├── page.tsx
-│ │ ├── components/
-│ │ └── services/
-│ ├── next.config.ts
-│ └── .env.local
-│
-└── README.md
-
+    notex-final-app/
+    │
+    ├── backend/
+    │ ├── app.js # Express server + SSE
+    │ ├── db.js # SQLite or Postgres helpers
+    │ ├── package.json
+    │ └── .env
+    │
+    ├── frontend/
+    │ ├── public/ # SVG backgrounds, icons
+    │ ├── src/app/ # Next.js application pages
+    │ │ ├── page.tsx
+    │ │ ├── components/
+    │ │ └── services/
+    │ ├── next.config.ts
+    │ └── .env.local
+    │
+    └── README.md
+    
 ---
 
 ## 🔧 Tech Stack
@@ -90,22 +90,34 @@ npm install
 ### Create .env file:
 
 ```bash
+DB_USER=postgres
+DB_PASSWORD=Ge25Es24!
+DB_NAME=notex
+DB_HOST=127.0.0.1
+DB_PORT=5432
 PORT=4000
-DATABASE_URL=./notes.db
-CORS_ORIGIN=https://your-frontend-url.web.app
 ```
 
-### Install dependencies:
+### Run backend locally::
 
 ```bash
 node app.js
 ```
 
-Backend will run at:
+## 🌐 **Backend Production URL**
+Deployed backend (Cloud Run):
+
 ```bash
-http://localhost:4000
-http://localhost:4000/events   <-- SSE stream
+https://notex-backend-docker-714805462533.us-east1.run.app
 ```
+API Endpoints
+| Method        | Endpoint |
+|--------------|------------|
+| GET     | /notes |
+| POST      | /notes |
+| PUT     | /notes/:id |
+| DELETE     | /notes/:id |
+| GET      | /events (SSE) |
 
 ## 3️⃣ **Frontend Setup (Next.js)**
 
