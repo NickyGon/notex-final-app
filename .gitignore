@@ -1,0 +1,59 @@
+# =============================================
+# Frontend (Next.js)
+# =============================================
+node_modules/
+.next/
+out/
+.turbo/
+.next/cache/
+.next/static/
+.next/server/
+
+# Env files
+.env
+.env.*
+*.env.local
+
+# =============================================
+# Backend (Node.js)
+# =============================================
+backend/node_modules/
+backend/logs/
+backend/*.log
+backend/tmp/
+backend/temp/
+backend/*.pid
+
+# Ignore backend environment secrets
+backend/.env
+backend/.env.*
+backend/*.pem
+backend/*.key
+backend/*.json
+
+# DO NOT ignore backend JS files like app.js, db.js — they ARE your source.
+
+# =============================================
+# Docker
+# =============================================
+**/.dockerignore
+**/Dockerfile*
+docker-compose.yml
+
+# =============================================
+# OS / Editor Files
+# =============================================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+.idea/
+.vscode/
+*.iml
+
+# =============================================
+# Misc
+# =============================================
+*.tsbuildinfo
+coverage/
